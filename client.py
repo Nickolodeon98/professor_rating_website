@@ -1,5 +1,5 @@
 import requests
-#from prettytable import PrettyTable
+from prettytable import PrettyTable
 
 
 url = 'https://fy16sj.pythonanywhere.com/'
