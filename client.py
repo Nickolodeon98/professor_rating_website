@@ -28,7 +28,7 @@ def average(professorId, moduleId):
     #     return print("Log in first!")
     average = requests.get(url + 'rate/average/%s/%s' % (moduleId, professorId)).text
     if average == -1:
-        return print("Cannot find the rating for this module and professor")
+        return print('Cannot find the rating for this module and professor')
     professor_name = requests.get(url + 'professor/code/name/%s' % professorId).text
     if professor_name == -1:
         return print("Cannot find professor name")
