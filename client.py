@@ -62,9 +62,9 @@ def main():
         cmd = raw_input('>>> ').split()
 #        cmd = str(inputlist).split()
         if cmd[0] == 'register':
-            userId = input('Username: ')
-            e_mail = input('Email: ')
-            passcode = input('Password: ')
+            userId = raw_input('Username: ')
+            e_mail = raw_input('Email: ')
+            passcode = raw_input('Password: ')
             register(userId, e_mail, passcode)
         elif cmd[0] == 'login':
             if len(cmd) == 1:
@@ -72,8 +72,8 @@ def main():
             elif len(cmd) > 2:
                 print("Wrong Input!")
             else:
-                userId = input('Username: ')
-                passcode = input('Password: ')
+                userId = raw_input('Username: ')
+                passcode = raw_input('Password: ')
                 login(cmd[1], userId, passcode)
         elif cmd[0] == 'logout':
             logout()
