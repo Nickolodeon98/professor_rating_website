@@ -32,10 +32,12 @@ def average(professorId, moduleId):
 	exit(1)
     professor_name = requests.get(url + 'professor/code/name/%s' % professorId).text
     if professor_name == -1:
-        return print("Cannot find professor name")
+        print("Cannot find professor name")
+	exit(1)
     module_name = requests.get(url + 'module/name/%s' % moduleId).text
     if module_name == -1:
-        return print("Cannot find module names")
+        print("Cannot find module names")
+	exit(1)
     print('\nThe rating of ' + professor_name + ' (' + professorId + ')' + ' in module ' + module_name + ' (' + moduleId + ')' + ' is ' + '*'*int(average))
 
 
