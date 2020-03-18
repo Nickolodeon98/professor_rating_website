@@ -59,6 +59,7 @@ def logout():
 def main():
     while(1):
         inputlist = input('>>> ')
+	cmd = []
         cmd = str(inputlist).split()
         if cmd[0] == 'register':
             userId = input('Username: ')
