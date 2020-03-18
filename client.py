@@ -29,15 +29,15 @@ def average(professorId, moduleId):
     average = requests.get(url + 'rate/average/%s/%s' % (moduleId, professorId)).text
     if average == -1:
         print('Cannot find the rating for this module and professor')
-	exit(1)
+        exit(1)
     professor_name = requests.get(url + 'professor/code/name/%s' % professorId).text
     if professor_name == -1:
         print("Cannot find professor name")
-	exit(1)
+        exit(1)
     module_name = requests.get(url + 'module/name/%s' % moduleId).text
     if module_name == -1:
         print("Cannot find module names")
-	exit(1)
+        exit(1)
     print('\nThe rating of ' + professor_name + ' (' + professorId + ')' + ' in module ' + module_name + ' (' + moduleId + ')' + ' is ' + '*'*int(average))
 
 
@@ -58,8 +58,8 @@ def logout():
 
 def main():
     while(1):
-	cmd = []
-	cmd = raw_input('>>> ').split()
+        # cmd = []
+        cmd = raw_input('>>> ').split()
 #        cmd = str(inputlist).split()
         if cmd[0] == 'register':
             userId = input('Username: ')
