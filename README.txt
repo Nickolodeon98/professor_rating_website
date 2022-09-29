@@ -1,4 +1,3 @@
-# My first django project to build a website that rates professors and modules
 To use the client, simply run the python program client.py:
 python client.py
 Then the command line interface is shown as the following: >>> 
